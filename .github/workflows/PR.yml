@@ -26,7 +26,7 @@ jobs:
       - name: Pull Request
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://api.github.com/repos/my-new-org-1/public/pulls \'
+          url: 'https://api.github.com/repos/my-new-org-1/public/pulls'
           method: 'POST'
           username: ${{ secrets.AMBIKA }}
           password: ${{ secrets.PASSWORD }}
