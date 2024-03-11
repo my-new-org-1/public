@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.AMBIKA }}
           password: ${{ secrets.PASSWORD }}
           customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"title":"ACTION PULL REQUEST","body":"COMMIT FORM ACTION","head":"Devlopment","base":"main"}'
+          data: '{"title":"ACTION","body":"COMMIT FORM ACTION","head":"Devlopment","base":"main"}'
