@@ -1,12 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Pull Request creation PR
+name: echo
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "Devlopment" ]
+ # pull_request:
+ # branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,13 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-    
-      - name: Pull Request
-        uses: fjogeleit/http-request-action@v1
-        with:
-          url: 'https://api.github.com/repos/my-new-org-1/public/pulls'
-          method: 'POST'
-          username: ${{ secrets.AMBIKA }}
-          password: ${{ secrets.PASSWORD }}
-          customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"title":"ACTION","body":"COMMIT FORM ACTION","head":"Devlopment","base":"main"}'
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+     
